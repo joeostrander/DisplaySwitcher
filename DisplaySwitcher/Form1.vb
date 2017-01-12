@@ -137,6 +137,9 @@ Public Class Form1
 
 
         Dim monitors As DisplayControl.NativeStructures.PHYSICAL_MONITOR() = dp.getMonitors()
+
+        If monitors.Count < 1 Then Exit Sub
+
         Dim mainMonitor As IntPtr = monitors(0).hPhysicalMonitor
 
         ' 0x60 = Set Input
