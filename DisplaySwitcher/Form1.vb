@@ -14,6 +14,9 @@ Public Class Form1
     Private intWaitSeconds As Integer = 10
     Private intLastKeyboardCount As Integer
 
+    Private stopWatch_StateChanged As New Stopwatch()
+    Private intDebounceMS As Integer = 500
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NotifyIcon1.Text = Application.ProductName
         intLastKeyboardCount = GetKeyboardCount()
@@ -220,18 +223,32 @@ Public Class Form1
 
         Dim intKeyboards As Integer = GetKeyboardCount()
         If intKeyboards <> intLastKeyboardCount Then
-            If intKeyboards = 0 Then
-                'no keyboards... switch to #2
-                boolWait = True
-                dtWaitStart = Now
-                SetDisplay(intCode2)
-            ElseIf intKeyboards = 2 Then    'mouse is a "keyboard" too
-                'keyboard present, switch to PC
-                boolWait = True
-                dtWaitStart = Now
-                SetDisplay(intCode1)
+            'make sure it's really changed (debounce)
+
+            If stopWatch_StateChanged.IsRunning Then
+                If stopWatch_StateChanged.ElapsedMilliseconds >= intDebounceMS Then
+                    If intKeyboards = 0 Then
+                        'no keyboards... switch to #2
+                        boolWait = True
+                        dtWaitStart = Now
+                        SetDisplay(intCode2)
+                    ElseIf intKeyboards = 2 Then    'mouse is a "keyboard" too
+                        'keyboard present, switch to PC
+                        boolWait = True
+                        dtWaitStart = Now
+                        SetDisplay(intCode1)
+                    End If
+                    intLastKeyboardCount = intKeyboards
+
+                    stopWatch_StateChanged.Reset()
+                End If
+
+            Else
+                stopWatch_StateChanged.Start()
             End If
-            intLastKeyboardCount = intKeyboards
+
+
+
         End If
         
     End Sub
