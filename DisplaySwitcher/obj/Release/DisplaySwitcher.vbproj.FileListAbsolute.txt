@@ -1,0 +1,21 @@
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.exe.config
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.exe
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.xml
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.Form1.resources
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.Resources.resources
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.vbproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.exe
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.xml
+c:\users\administrator\documents\visual studio 2013\Projects\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.exe.config
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.xml
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\bin\Release\DisplaySwitcher.xml
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.Form1.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.Resources.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.vbproj.GenerateResource.Cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.vbprojResolveAssemblyReference.cache
