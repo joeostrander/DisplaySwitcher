@@ -150,6 +150,30 @@ Public Class Form1
         Dim success = DisplayControl.NativeMethods.SetVCPFeature(mainMonitor, &H60, DisplayNum)
 
         dp.cleanupMonitors(CUInt(monitors.Length), monitors)
+
+        WriteToEventLog(Application.ProductName & vbCrLf & vbCrLf & "Sending VCP Code:  " & DisplayNum)
+
+    End Sub
+
+    Private Sub WriteToEventLog(ByVal sMessage As String)
+
+        'Requires Elevation
+        'If Not EventLog.SourceExists(sSource, sMachine) Then
+        '    EventLog.CreateEventSource(sSource, sLog, sMachine)
+        'End If
+
+
+        Dim ELog As EventLog = New EventLog("Application")
+        ELog.Source = "Application"
+        'ELog.WriteEntry(sMessage)
+        ELog.WriteEntry(sMessage, EventLogEntryType.Information, 101)
+
+        'ELog.WriteEntry(sMessage, EventLogEntryType.Information, 101, CShort(1))
+
+
+
+
+
     End Sub
 
     Private Sub RunAtStartupToolStripMenuItemTRAY_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RunAtStartupToolStripMenuItemTRAY.Click

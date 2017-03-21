@@ -19,3 +19,14 @@ C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\ob
 C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.Resources.resources
 C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.vbproj.GenerateResource.Cache
 C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\DisplaySwitcher\obj\Release\DisplaySwitcher.vbprojResolveAssemblyReference.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.exe.config
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.xml
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.xml
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.vbprojResolveAssemblyReference.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.Form1.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.Resources.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.vbproj.GenerateResource.Cache
