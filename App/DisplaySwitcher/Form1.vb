@@ -15,7 +15,7 @@ Public Class Form1
     Private intLastKeyboardCount As Integer
 
     Private stopWatch_StateChanged As New Stopwatch()
-    Private intDebounceMS As Integer = 500
+    Private intDebounceMS As Integer = 1000
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NotifyIcon1.Text = Application.ProductName
@@ -265,16 +265,21 @@ Public Class Form1
                     intLastKeyboardCount = intKeyboards
 
                     stopWatch_StateChanged.Reset()
+                    'Console.WriteLine(Now & " OK SWITCH")
+                Else
+                    'Console.WriteLine(Now & " not ready...")
                 End If
 
             Else
                 stopWatch_StateChanged.Start()
+                'Console.WriteLine(Now & "Keyboard count changed from {0} to {1}", intLastKeyboardCount, intKeyboards)
             End If
-
-
-
+        Else
+            If stopWatch_StateChanged.IsRunning Then
+                stopWatch_StateChanged.Reset()
+            End If
         End If
-        
+
     End Sub
 
     Private Sub TextBoxCode1_LostFocus(sender As Object, e As EventArgs) Handles TextBoxCode1.LostFocus
