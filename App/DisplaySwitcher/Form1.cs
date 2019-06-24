@@ -11,7 +11,7 @@ using System.Diagnostics;
 using Microsoft.Win32;
 using System.Management;
 
-namespace DisplaySwitcherCSharp
+namespace DisplaySwitcher
 {
     public partial class Form1 : Form
     {
@@ -20,13 +20,14 @@ namespace DisplaySwitcherCSharp
         //public bool boolTrayExit = false;
         private bool boolStartup = false;
 
-        private int intCode1 = 0;
-        private int intCode2 = 0;
+        //private int intCode1 = 0;
+        //private int intCode2 = 0;
 
         private bool boolWait = false;
         private DateTime dtWaitStart;
         private int intWaitSeconds = 10;
         private int intLastKeyboardCount;
+        private int intInitialKeyboardCount;
 
         private Stopwatch stopWatch_StateChanged = new Stopwatch();
         private int intDebounceMS = 1000;
@@ -39,11 +40,18 @@ namespace DisplaySwitcherCSharp
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            SaveRegistrySettings();
-            MessageBox.Show("Settings saved.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (SaveRegistrySettings())
+            {
+                MessageBox.Show("Settings saved.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Failed to save settings!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
 
-        private void SaveRegistrySettings()
+        private bool SaveRegistrySettings()
         {
             try
             {
@@ -52,10 +60,10 @@ namespace DisplaySwitcherCSharp
 
                 RegistryKey appRegKey;
                 appRegKey = Registry.CurrentUser.OpenSubKey("Software\\" + Application.ProductName, true);
-
+                
                 //Startup 
                 appRegKey.SetValue("RunAtStartup", boolStartup, RegistryValueKind.DWord);
-
+                                
                 //if boolStartup..., add executable path to the Run registry key
                 if (boolStartup)
                 {
@@ -63,17 +71,32 @@ namespace DisplaySwitcherCSharp
                 }
                 else
                 {
-                    regKey_RUN.DeleteValue(Application.ProductName);
+                    if (regKey_RUN.GetValueNames().Contains(Application.ProductName))
+                    {
+                        regKey_RUN.DeleteValue(Application.ProductName);
+                    }
+                    
+                }
+
+                int intCode1 = 15;
+                int intCode2 = 17;
+
+                Int32.TryParse(TextBoxCode1.Text, out intCode1);
+                Int32.TryParse(TextBoxCode2.Text, out intCode2);
+
+                if (intCode1 == 0)
+                {
+                    intCode1 = 15;
+                    TextBoxCode1.Text = intCode1.ToString();
+                }
+
+                if (intCode2 == 0)
+                {
+                    intCode2 = 17;
+                    TextBoxCode2.Text = intCode2.ToString();
                 }
 
 
-
-                if (intCode1 == 0) { intCode1 = 15; }
-                if (intCode2 == 0) { intCode2 = 17; }
-
-
-                if (TextBoxCode1.Text != intCode1.ToString()) { TextBoxCode1.Text = intCode1.ToString(); }
-                if (TextBoxCode2.Text != intCode2.ToString()) { TextBoxCode2.Text = intCode2.ToString(); }
 
                 //Save the Codes
                 appRegKey.SetValue("Code1", intCode1, RegistryValueKind.DWord);
@@ -90,9 +113,10 @@ namespace DisplaySwitcherCSharp
             {
                 Console.WriteLine("Exeption in SaveRegistrySettings()");
                 Console.WriteLine(ex.Message);
-
+                return false;
             }
-            
+
+            return true;
         }
 
         private void ButtonInput2_Click(object sender, EventArgs e)
@@ -183,7 +207,8 @@ namespace DisplaySwitcherCSharp
         private void Form1_Load(object sender, EventArgs e)
         {
             NotifyIcon1.Text = Application.ProductName;
-            intLastKeyboardCount = GetKeyboardCount();
+            intInitialKeyboardCount = GetKeyboardCount();
+            intLastKeyboardCount = intInitialKeyboardCount;
             LoadRegistrySettings();
         }
 
@@ -257,8 +282,8 @@ namespace DisplaySwitcherCSharp
                 //Load current Startup Value and set it in the interface
                 boolStartup = (int)appRegKey.GetValue("RunAtStartup", 0) == 1 ? true : false;
 
-                intCode1 = (int)appRegKey.GetValue("Code1", 15);
-                intCode2 = (int)appRegKey.GetValue("Code2", 17);
+                int intCode1 = (int)appRegKey.GetValue("Code1", 15);
+                int intCode2 = (int)appRegKey.GetValue("Code2", 17);
 
                 TextBoxCode1.Text = intCode1.ToString();
                 TextBoxCode2.Text = intCode2.ToString();
@@ -363,19 +388,28 @@ namespace DisplaySwitcherCSharp
                 {
                     if (stopWatch_StateChanged.ElapsedMilliseconds >= intDebounceMS)
                     {
-                        if (intKeyboards == 0)
+                        if (intKeyboards < intInitialKeyboardCount)
                         {
-                            //no keyboards... switch to #2
+                            //fewer keyboards... switch to #2
                             boolWait = true;
                             dtWaitStart = DateTime.Now;
-                            SetDisplay(intCode2);
+
+                            int intCode2;
+                            if (Int32.TryParse(TextBoxCode2.Text,out intCode2))
+                            {
+                                SetDisplay(intCode2);
+                            }
                         }
-                        else if (intKeyboards == 2) //mouse is a "keyboard" too
+                        else if (intKeyboards == intInitialKeyboardCount) 
                         {
                             //keyboard present, switch to PC
                             boolWait = true;
                             dtWaitStart = DateTime.Now;
-                            SetDisplay(intCode1);
+                            int intCode1;
+                            if (Int32.TryParse(TextBoxCode1.Text, out intCode1))
+                            {
+                                SetDisplay(intCode1);
+                            }
                         }
 
                         intLastKeyboardCount = intKeyboards;

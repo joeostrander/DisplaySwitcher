@@ -1,4 +1,4 @@
-﻿namespace DisplaySwitcherCSharp
+﻿namespace DisplaySwitcher
 {
     partial class Form1
     {
@@ -135,14 +135,14 @@
             // 
             this.RunAtStartupToolStripMenuItemTRAY.CheckOnClick = true;
             this.RunAtStartupToolStripMenuItemTRAY.Name = "RunAtStartupToolStripMenuItemTRAY";
-            this.RunAtStartupToolStripMenuItemTRAY.Size = new System.Drawing.Size(180, 22);
+            this.RunAtStartupToolStripMenuItemTRAY.Size = new System.Drawing.Size(151, 22);
             this.RunAtStartupToolStripMenuItemTRAY.Text = "&Run At Startup";
             this.RunAtStartupToolStripMenuItemTRAY.Click += new System.EventHandler(this.RunAtStartupToolStripMenuItemTRAY_Click);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.ExitToolStripMenuItem.Text = "E&xit";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -179,7 +179,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

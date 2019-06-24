@@ -1,0 +1,10 @@
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.exe.config
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\bin\Release\DisplaySwitcher.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.csprojAssemblyReference.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcherCSharp.Form1.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.Properties.Resources.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.csproj.GenerateResource.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.csproj.CoreCompileInputs.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcher\obj\Release\DisplaySwitcher.pdb

@@ -1,0 +1,12 @@
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\bin\Release\DisplaySwitcherVB.exe.config
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\bin\Release\DisplaySwitcherVB.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\bin\Release\DisplaySwitcherVB.pdb
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\bin\Release\DisplaySwitcherVB.xml
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.vbprojAssemblyReference.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.Form1.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.Resources.resources
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.vbproj.GenerateResource.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.vbproj.CoreCompileInputs.cache
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.exe
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.xml
+C:\Users\qojmo2\Google Drive\DEV\VisualStudio\DisplaySwitcher\App\DisplaySwitcherVB\obj\Release\DisplaySwitcherVB.pdb
