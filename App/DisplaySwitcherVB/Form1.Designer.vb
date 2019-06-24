@@ -36,6 +36,7 @@ Partial Class Form1
         Me.RunAtStartupToolStripMenuItemTRAY = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LabelKeyboardCount = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -91,7 +92,7 @@ Partial Class Form1
         '
         'ButtonSave
         '
-        Me.ButtonSave.Location = New System.Drawing.Point(15, 107)
+        Me.ButtonSave.Location = New System.Drawing.Point(12, 107)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(107, 23)
         Me.ButtonSave.TabIndex = 6
@@ -132,11 +133,21 @@ Partial Class Form1
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 500
         '
+        'LabelKeyboardCount
+        '
+        Me.LabelKeyboardCount.AutoSize = True
+        Me.LabelKeyboardCount.Location = New System.Drawing.Point(139, 112)
+        Me.LabelKeyboardCount.Name = "LabelKeyboardCount"
+        Me.LabelKeyboardCount.Size = New System.Drawing.Size(85, 13)
+        Me.LabelKeyboardCount.TabIndex = 7
+        Me.LabelKeyboardCount.Text = "Keyboard count:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(274, 148)
+        Me.Controls.Add(Me.LabelKeyboardCount)
         Me.Controls.Add(Me.ButtonSave)
         Me.Controls.Add(Me.ButtonInput2)
         Me.Controls.Add(Me.ButtonInput1)
@@ -167,5 +178,5 @@ Partial Class Form1
     Friend WithEvents RunAtStartupToolStripMenuItemTRAY As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-
+    Friend WithEvents LabelKeyboardCount As Label
 End Class

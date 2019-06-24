@@ -227,6 +227,18 @@ Public Class Form1
 
             Dim collection As ManagementObjectCollection = searcher.Get
             count = collection.Count
+            LabelKeyboardCount.Text = "Keyboard count: " & count
+            If count <> intLastKeyboardCount Then
+                Console.WriteLine("Keyboards:")
+                For Each keyb As ManagementObject In collection
+                    Console.WriteLine(keyb.GetPropertyValue("Name").ToString())
+                    'Console.WriteLine(keyb.GetPropertyValue("DeviceID").ToString())
+                    'Console.WriteLine(keyb.GetPropertyValue("Status").ToString())
+                    'Console.WriteLine(keyb.GetPropertyValue("PNPDeviceID").ToString())
+                    Console.WriteLine(keyb.GetPropertyValue("Description").ToString())
+                Next
+            End If
+
         Catch ex As Exception
             count = -1
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -265,14 +277,14 @@ Public Class Form1
                     intLastKeyboardCount = intKeyboards
 
                     stopWatch_StateChanged.Reset()
-                    'Console.WriteLine(Now & " OK SWITCH")
+                    Console.WriteLine(Now & " OK SWITCH")
                 Else
-                    'Console.WriteLine(Now & " not ready...")
+                    Console.WriteLine(Now & " not ready...")
                 End If
 
             Else
                 stopWatch_StateChanged.Start()
-                'Console.WriteLine(Now & "Keyboard count changed from {0} to {1}", intLastKeyboardCount, intKeyboards)
+                Console.WriteLine(Now & "Keyboard count changed from {0} to {1}", intLastKeyboardCount, intKeyboards)
             End If
         Else
             If stopWatch_StateChanged.IsRunning Then

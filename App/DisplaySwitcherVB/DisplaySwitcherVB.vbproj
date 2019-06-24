@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{30DD7F60-604D-4D8D-AEBB-24E7B313E971}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>DisplaySwitcher.My.MyApplication</StartupObject>
-    <RootNamespace>DisplaySwitcher</RootNamespace>
-    <AssemblyName>DisplaySwitcher</AssemblyName>
+    <StartupObject>DisplaySwitcherVB.My.MyApplication</StartupObject>
+    <RootNamespace>DisplaySwitcherVB</RootNamespace>
+    <AssemblyName>DisplaySwitcherVB</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -20,7 +20,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>DisplaySwitcher.xml</DocumentationFile>
+    <DocumentationFile>DisplaySwitcherVB.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>DisplaySwitcher.xml</DocumentationFile>
+    <DocumentationFile>DisplaySwitcherVB.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>

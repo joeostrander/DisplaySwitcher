@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Display Switcher")> 
+<Assembly: AssemblyTitle("Display Switcher VB")>
 <Assembly: AssemblyDescription("Send VCP codes to switch display input when keyboard is not present")> 
-<Assembly: AssemblyCompany("Joe Ostrander")> 
-<Assembly: AssemblyProduct("Display Switcher")> 
+<Assembly: AssemblyCompany("Joe Ostrander")>
+<Assembly: AssemblyProduct("Display Switcher VB")>
 <Assembly: AssemblyCopyright("Copyright © Joe Ostrander 2016")> 
 <Assembly: AssemblyTrademark("")> 
 
